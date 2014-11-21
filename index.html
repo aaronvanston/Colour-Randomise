@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colour Randomise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="jquery.color.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="text-center">Hover over this container</h1>
+    </div>
+</div>
+
+<script>
+    $(".jumbotron").hover(function(){
+        var colour = '#'+Math.floor(Math.random()*16777215).toString(16);
+        $("body").animate({
+            backgroundColor: colour
+        }, 500 );
+    }).delay( 800 );
+</script>
+</body>
+</html>
